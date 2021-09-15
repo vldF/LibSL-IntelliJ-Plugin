@@ -1,0 +1,24 @@
+<idea-plugin>
+    <id>org.jetbrains.research.libslplugin</id>
+    <name>LibslPlugin</name>
+    <vendor>VorPAL-research</vendor>
+    <description><![CDATA[
+        Plugin that improve experience of using LibSL
+    ]]></description>
+    <idea-version since-build="#IU-211.7628.21" />
+    <depends>com.intellij.modules.lang</depends>
+    <extensions defaultExtensionNs="com.intellij">
+        <fileType
+                name="LibSL file"
+                implementationClass="org.jetbrains.research.libslplugin.LibslFileType"
+                language="lsl"
+                extensions="lsl"
+        />
+        <lang.parserDefinition language="lsl" implementationClass="org.jetbrains.research.libslplugin.LibslParserDefinition" />
+        <lang.syntaxHighlighter language="lsl" implementationClass="org.jetbrains.research.libslplugin.LibslSyntaxHighlighter" />
+        <lang.findUsagesProvider language="lsl" implementationClass="org.jetbrains.research.libslplugin.LibslFindUsagesProvider" />
+    </extensions>
+    <actions>
+
+    </actions>
+</idea-plugin>
